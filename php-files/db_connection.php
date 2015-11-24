@@ -1,8 +1,8 @@
 <?php
 
-$servername = "localhost";
+$servername = "cse470win.cloudapp.net:3306";
 $username = "root";
-$password = "";
+$password = "sXdG1234";
 $db = "yo";
 
 // Create connection
