@@ -1,8 +1,8 @@
 <?php
 
-$servername = "cse470win.cloudapp.net:3306";
-$username = "root";
-$password = "sXdG1234";
+$servername = "ap-cdbr-azure-east-c.cloudapp.net";
+$username = "b7ee0a1471a7bb";
+$password = "e070d576a96f3e6";
 $db = "yo";
 
 // Create connection
