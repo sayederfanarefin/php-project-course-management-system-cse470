@@ -1,6 +1,6 @@
 <?php
-   $sucesspagelocation  = 'Location: /470/sucess_page.html';
-   $errorpafelocation = 'Location: /470/error_page.html';
+   $sucesspagelocation  = 'Location: /sucess_page.html';
+   $errorpafelocation = 'Location: /error_page.html';
     include 'db_connection.php';
 
 $name = $_POST["name"];
