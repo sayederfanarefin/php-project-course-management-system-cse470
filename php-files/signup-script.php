@@ -16,7 +16,7 @@ if($user_type == "Student"){
         exit;
 
     } else {
-        $errorr =  mysql_errno($conn) . ": " . mysql_error($conn) . "\n";
+        $errorr =  mysqli_errno($conn) . ": " . mysqli_error($conn) . "\n";
         //echo $errorr;
         header($errorpafelocation."Signup failed, pleaase try again later \n".$errorr );
         exit;
