@@ -5,6 +5,8 @@ $pass = $_POST["password"];
 $user_type = $_POST["user_type"];
 
 if(user_type == "Student"){
+     $query = 'SELECT * FROM Student_table WHERE Id ='.$emailorid;
+
     
 } else if (user_type == "Teacher") {
     

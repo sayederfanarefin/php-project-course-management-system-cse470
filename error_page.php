@@ -1,3 +1,8 @@
+<?php
+$msg = $_GET['err_msg'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,7 +53,7 @@
                         </h1>
                         <br> <br>
                         
-                       <h3>Please try again later. </h3> </center>
+                       <h3><?php echo $msg ?> </h3> </center>
                     </div>
                     <div class="col-lg-2"></div>
                 </div>
