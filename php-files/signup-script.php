@@ -1,6 +1,6 @@
 <?php
    $sucesspagelocation  = 'Location: /sucess_page.html';
-   $errorpafelocation = 'Location: /error_page.html';
+   $errorpafelocation = 'Location: /error_page.php?err_msg=';
     include 'db_connection.php';
 
 $name = $_POST["name"];
@@ -11,13 +11,14 @@ $emailorid = $_POST["emailorid"];
 if($user_type == "Student"){
     $query = 'INSERT INTO Student_table (Id,Name,Password) VALUES ('.$emailorid.',"'.$name.'","'.$password.'")';
 
-if (mysqli_query($conn, $query)) {
-    header($sucesspagelocation);
-    exit;
+    if (mysqli_query($conn, $query)) {
+        header($sucesspagelocation);
+        exit;
 
-} else {
-    header($errorpafelocation);
-    exit;
+    } else {
+        $errorr =  mysql_errno($conn) . ": " . mysql_error($conn) . "\n";
+        header($errorpafelocation."Signup failed, pleaase try again later \n".$errorr );
+        exit;
 }
 
 
