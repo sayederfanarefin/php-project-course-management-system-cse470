@@ -1,0 +1,43 @@
+erfan 1. settings teacher: select course-section-time, 
+
+erfan 2. teacher: consultation q- decline, message
+
+
+
+HEYA 3.upload material fix
+4. student: notice fix
+
+
+erfan 5.teacher: result upload, excel
+
+
+6.studet: result display
+7.student: settings: ki ki course nise.
+HEYA 8.student: consultation time booking request
+9. student: consultation duration
+10. onek joss image for course seq. admin
+11. student : display class routine
+
+
+erfan 12. student: notifaction
+erfan 13.admin: fix course defination 
+
+
+HEYA 14. settings teacher:consultation time set
+
+
+if (isset($_POST['decline'])) {
+    $user_type = $_SESSION['user_type'];
+    $msg = $_POST["msg"];
+    $student_Id = $_POST["student_Id"];
+
+    $sql = "UPDATE consultation_queue SET decline=1 WHERE student_Id='{$student_Id}'";
+    
+    if($msg!=""){
+    $sql2 = "INSERT INTO message (User_type_from, User_from, Message)
+    VALUES ('{$user_type}',{$teacher_email}','{$msg}')}'";
+    $result = mysqli_query($conn,$sql2);
+    }
+    $result = mysqli_query($conn,$sql);
+    
+}
